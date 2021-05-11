@@ -51,6 +51,9 @@ function Mainpage() {
         <div className="main__message main__receiver">
             <button onClick={authWithGoogle}>Login</button>
         </div>
+        <div className="main__message">
+            by parvatala prasanth
+        </div>
         
       
     </div>
