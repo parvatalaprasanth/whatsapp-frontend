@@ -31,9 +31,20 @@ function Main() {
     }, [trigger,user2])
 
     useEffect(() => {
-        const pusher = new Pusher('cee6b9ad2c2f3563f0c7', {
-            cluster: 'ap2'
-          });
+        // const pusher = new Pusher('cee6b9ad2c2f3563f0c7', {
+        //     cluster: 'ap2'
+        //   });
+
+          let pusher = new Pusher('app-key', {
+            wsHost: 'socket.gleemeet.com',
+         
+    
+            encrypted: true,
+            disableStats: true,
+        
+        
+            enabledTransports: ['ws', 'wss'],
+        });
        
           const channel = pusher.subscribe('message');
           channel.bind('inserted', function(data) {
