@@ -19,6 +19,7 @@ function Sidebar() {
     useEffect(() => {
         if(user1) {
             const arr=[]
+            console.log("dfdfdfd")
             const fetchBlogs=async()=>{
                 const users=db.collection('users');
                 const data=await users.get();
